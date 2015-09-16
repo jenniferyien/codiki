@@ -12,7 +12,7 @@
 
 <p>
   <strong>Contributor:</strong>
-  <%= @article.contributor %>
+  <%= "#{@article.contributor.first_name} #{@article.contributor.last_name}" %>
 </p>
 
 <p>
@@ -22,7 +22,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @article.category %>
+  <%= @article.category.title %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |

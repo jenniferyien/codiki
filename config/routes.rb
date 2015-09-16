@@ -3,11 +3,15 @@ Rails.application.routes.draw do
   resources :categories
   resources :contributors
 
+  get '/', to: 'articles#index'
   get '/login', to: 'contributors#login'
   post '/login', to: 'contributors#login_post'
 
   get '/logout', to: 'contributors#logout'
 
+  get '/about', to: 'contributors#about', as: 'about'
+
+  get '/contact', to: 'contributors#contact', as: 'contact'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

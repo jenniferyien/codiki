@@ -26,12 +26,16 @@ class ContributorsController < ApplicationController
         #password is bad
         redirect_to '/login'
       end
-    else
-      redirect_to '/login'
-    end
+      else
+        redirect_to '/login'
+      end
   end
 
+  def about
+  end
 
+  def contact
+  end
   # GET /contributors
   # GET /contributors.json
   def index
@@ -57,15 +61,22 @@ class ContributorsController < ApplicationController
   def create
     @contributor = Contributor.new(contributor_params)
 
-    respond_to do |format|
-      if @contributor.save
-        format.html { redirect_to @contributor, notice: 'Contributor was successfully created.' }
-        format.json { render :show, status: :created, location: @contributor }
+    if current_contributor
+      redirect_to articles_path
+    else
+      contributor_params = params.require(:contributor).permit(:first_name, :last_name, :email, :password)
+      @contributor = Contributor.new(contributor_params)
+      if @contributor.valid?
+        # EVERYTHING IS GREAT PATH
+        @contributor.save
+        session[:contributor_id] = @contributor.id
+        redirect_to '/'
       else
-        format.html { render :new }
-        format.json { render json: @contributor.errors, status: :unprocessable_entity }
-      end
+        # SOMETHING IS WRONG PATH
+        @message = "cannot be blank!"
+        render :new
     end
+  end
   end
 
   # PATCH/PUT /contributors/1

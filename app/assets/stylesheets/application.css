@@ -13,3 +13,114 @@
  *= require_tree .
  *= require_self
  */
+body {
+  margin: 0;
+}
+
+header {
+  background-color: black;
+  color: #fff;
+  min-height: 40px;
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  text-align: right;
+  min-height: 20px;
+  margin: 0;
+  float: left;
+}
+
+#copyright{
+  margin:1% 5%;
+  font-size: 10px;
+}
+
+/*resetting unorder list and h1 headers they have random paddings*/
+ul{
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+/*all links*/
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/*half page divs*/
+.half_page{
+  width: 48%;
+  float: left;
+}
+
+/*3/4 page div*/
+.three_fourth{
+  width: 66%;
+  float: left;
+}
+
+/*1/4 page div*/
+.one_fourth{
+  width: 33%;
+  float: left;
+}
+
+/*header logo on left*/
+.half_page#logo{
+  margin: 1%;
+}
+
+/*nav bar*/
+.nav{
+  float: right;
+  margin: 0 10px;
+}
+ /*----- Menu Navigation -----*/
+ .menu li {
+     margin:0px;
+     list-style:none;
+ }
+
+/*size of arrow*/
+ .menu .arrow {
+     font-size:11px;
+     line-height:0%;
+ }
+
+/*makes sure the li in inline with the arrow*/
+ .menu > ul > li {
+     display:inline-block;
+     position:relative;
+ }
+
+/*makes sure box is in front of all values/box with li opacity*/
+ .menu li:hover .sub-menu {
+     z-index:1;
+     opacity:1;
+ }
+
+ /*background color and menu position*/
+  .sub-menu {
+      /*makes sure position of box does not interfer with div*/
+      position:absolute;
+      /*position of box under arrow*/
+      left:-70px;
+      top: 27px;
+      opacity:0;
+      background:#000;
+  }
+
+/*font size  */
+  .sub-menu li {
+      font-size:12px;
+  }
+
+ .sub-menu li a {
+     margin:8px 15px;
+     display:block;
+ }
