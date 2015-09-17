@@ -73,6 +73,7 @@ class ContributorsController < ApplicationController
       if @contributor.valid?
         @contributor.save
         session[:contributor_id] = @contributor.id
+        UserNotifier.send_signup_email(@contributor).deliver
         redirect_to '/'
       else
         render :new
