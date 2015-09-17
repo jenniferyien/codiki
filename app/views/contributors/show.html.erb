@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @contributor.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @contributor.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @contributor.email %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @contributor.password %>
-</p>
-
-<%= link_to 'Edit', edit_contributor_path(@contributor) %> |
-<%= link_to 'Back', contributors_path %>
+<div class='nameBanner'>
+  <div class='one_fourth name'>
+      <h1><%= "#{@contributor.first_name} #{@contributor.last_name}" %>
+      <% if current_contributor %>
+          <% if current_contributor.id == @contributor.id %>
+          <small><small><small><small><%= link_to 'Edit', edit_contributor_path(@contributor) %></small></small></small></small>
+            <% end %> </h1>
+      <% end %>
+      <p><%= @contributor.email %></p>
+      <button><%= link_to 'Check out other Authors', contributors_path %> </button>
+  </div>
+  <div class='half_page formbox'>
+    <h3>Articles by <%= "#{@contributor.first_name} #{@contributor.last_name}" %></h3>
+      <% @articles.each do |article| %>
+          <% if article.contributor_id == @contributor.id %>
+          <div id='conArticle'>
+            <div id='content'>
+                <h2><%= article.title %></h2>
+                <p><%= markdown(truncate("#{article.content}",length: 300)) %></p>
+                <button><%= link_to 'View More', article %></button>
+            </div>
+          </div>
+          <% end %>
+      <% end %>
+  </div>
+</div>

@@ -14,3 +14,86 @@
 .intro {
   margin: 1% 3%;
 }
+
+// show
+.categoryHead {
+  background-color: #E2CAA9;
+  min-height: 150px;
+}
+.title {
+  margin: 1% 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 3em;
+}
+.blurb {
+  margin: 1% 5%;
+  font-size: 20px;
+  text-align: right;
+}
+#articleNote{
+  margin: 0 3%;
+  height: 40px;
+}
+#articleNote p{
+  text-align: right;
+  font-size: 12px;
+}
+#actualArticle {
+  margin:0 3%;
+}
+.half_page#update {
+  text-align: right;
+}
+.half_page#update p{
+  margin: 0;
+  font-size: 11px;
+}
+.half_page#update #timestamp{
+  font-size: 9px;
+}
+.three_fourth p {
+  margin: 0;
+}
+
+// new
+.newTitle {
+  margin: 2.8% 0;
+  font-size: 14px;
+  line-height: 3em;
+  text-align: center;
+}
+
+
+
+// edit
+.messages {
+  color: red;
+}
+.three_fourth.actions{
+  margin: 0;
+  text-align: right;
+}
+.three_fourth.actions input[type=submit]{
+  margin: 0 3%;
+  margin-bottom: 3%;
+  font-size: 16px;
+  border-radius: 0;
+}
+input[type=text] {
+  width: 400px;
+  height: 1.5em;
+  font-size: 14px;
+  margin: 1% 0;
+}
+textarea{
+  font-size: 12px;
+  margin: 1% 0;
+}
+select {
+  width: 400px;
+  font-size: 14px;
+  border-radius: 0;
+  border: 0;
+  margin: 1% 0;
+}

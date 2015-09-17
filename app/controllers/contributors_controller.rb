@@ -46,6 +46,7 @@ class ContributorsController < ApplicationController
   # GET /contributors/1
   # GET /contributors/1.json
   def show
+    @articles = Article.all
   end
 
   # GET /contributors/new
@@ -87,8 +88,8 @@ class ContributorsController < ApplicationController
         format.html { redirect_to @contributor, notice: 'Contributor was successfully updated.' }
         format.json { render :show, status: :ok, location: @contributor }
       else
-        # format.html { render :edit }
-        # format.json { render json: @contributor.errors, status: :unprocessable_entity }
+        format.html { render :edit }
+        format.json { render json: @contributor.errors, status: :unprocessable_entity }
       end
     end
   end

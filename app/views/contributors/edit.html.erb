@@ -1,6 +1,50 @@
-<h1>Editing Contributor</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @contributor %> |
-<%= link_to 'Back', contributors_path %>
+<div class='nameBanner'>
+  <div class='one_fourth name'>
+      <h1><%= "#{@contributor.first_name} #{@contributor.last_name}" %>
+      <p><%= @contributor.email %></p>
+      <button><%= link_to 'Check out other Authors', contributors_path %> </button>
+  </div>
+  <div class='half_page formbox'>
+    <div id= 'registration'>
+        <h3>UPDATE YOUR ACCOUNT</h3>
+        <%= form_for(@contributor) do |f| %>
+          <div class="field">
+            <%= f.label :first_name %><br>
+            <%= f.text_field :first_name, placeholder: "e.g. John" %>
+          </div>
+          <div class="field">
+            <%= f.label :last_name %><br>
+            <%= f.text_field :last_name, placeholder: "e.g. Doe"%>
+          </div>
+          <div class="field">
+            <%= f.label :email %><br>
+            <%= f.email_field :email, placeholder: "e.g. JohnDoe@gmail.com", oninvalid: "setCustomValidity('Valid email address is required')"%>
+          </div>
+          <div class="field">
+            <%= f.label :password %><br>
+            <%= f.password_field :password, placeholder: "e.g. superPassword123"%>
+          </div>
+          <div class="actions">
+            <%= f.submit :Update %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+<div class='one_fourth welcomeNote'>
+    <ul class='errorPage'>
+      <% @contributor.errors.each do |field, error| %>
+          <% if field.to_s.humanize == 'Email' %>
+              <li><%= "#{field.to_s.humanize} must be valid and can't be blank" %></li>
+          <% elsif field.to_s.humanize == 'Password' %>
+              <li><%= "#{field.to_s.humanize} must be entered and longer than 5 characters" %></li>
+          <% elsif field.to_s.humanize == 'First name' %>
+              <li><%= "#{field.to_s.humanize} is required" %></li>
+          <% elsif field.to_s.humanize == 'Last name' %>
+              <li><%= "#{field.to_s.humanize} is required" %></li>
+          <% else %>
+              <li><%= field.to_s.humanize %> <%= error %></li>
+          <% end%>
+      <% end %>
+    </ul>
+</div>

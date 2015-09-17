@@ -14,7 +14,7 @@
           <% if field.to_s.humanize == 'Email' %>
               <li><%= "#{field.to_s.humanize} must be valid and can't be blank" %></li>
           <% elsif field.to_s.humanize == 'Password' %>
-              <li><%= "#{field.to_s.humanize} must be entered" %></li>
+              <li><%= "#{field.to_s.humanize} must be entered and longer than 5 characters" %></li>
           <% elsif field.to_s.humanize == 'First name' %>
               <li><%= "#{field.to_s.humanize} is required" %></li>
           <% elsif field.to_s.humanize == 'Last name' %>

@@ -1,3 +1,20 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.categoryNotice {
+  line-height: 3em;
+  margin:1.5%;
+  text-align: center;
+  font-size: 18px;
+}
+.category {
+  margin: 0 3%;
+}
+
+
+
+#CategoryNote{
+  margin: 0 3%;
+  height: 40px;
+}

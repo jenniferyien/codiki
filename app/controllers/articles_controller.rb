@@ -24,17 +24,16 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
-
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
+      article = params.require(:article).permit(:title , :content, :contributor_id, :category_id)
+      @article = Article.new(article)
+      @article.contributor = current_contributor
+      if @article.valid?
+        @article.save
+        redirect_to article_path(@article.id)
       else
-        format.html { render :new }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
+        render :new
       end
-    end
+
   end
 
   # PATCH/PUT /articles/1

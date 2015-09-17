@@ -1,33 +1,51 @@
 <%= form_for(@article) do |f| %>
-  <% if @article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
-      <ul>
-      <% @article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div class='half_page field'>
+      <strong><%= f.label :title %></strong><br>
+      <%= f.text_field :title %>
     </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="field">
-    <%= f.label :contributor_id %><br>
-    <%= f.text_field :contributor_id %>
-  </div>
-  <div class="field">
-    <%= f.label :category_id %><br>
-    <%= f.text_field :category_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class='half_page messages'>
+      <% @article.errors.each do |field, error| %>
+        <% if field.to_s.humanize == 'Category' %>
+            <li><%= "#{field.to_s.humanize} must be selected" %></li>
+        <% elsif field.to_s.humanize == 'Content' %>
+            <li><%= "#{field.to_s.humanize} must be entered, it can't be blank" %></li>
+        <% elsif field.to_s.humanize == 'Title' %>
+            <li><%= "#{field.to_s.humanize} is required" %></li>
+          <% end %>
+      <% end %>
+    </div>
+    <div class='three_fourth field'>
+      <strong><%= f.label :category_id %></strong><br>
+      <%= f.select :category_id, options_for_select(Category.all.collect { |p| [ p.title, p.id ] }), include_blank: false %>
+    </div>
+    <div class='three_fourth field'>
+      <strong><%= f.label :content %></strong><br>
+      <%= f.text_area :content, cols: "88", rows: "30" %>
+    </div>
+    <div class='one_fourth'>
+      <h4>BASIC WRITING GUIDE</h4>
+      <p> <strong> Heading </strong> <br/>
+          # The largest heading <br />
+          ## The second largest heading <br />
+          … <br />
+          ###### The 6th largest heading<br /><br/>
+          <strong> Styling </strong><br/>
+          Italic: *This text will be italic* <br/>
+          Bold: **This text will be bold** <br/><br/>
+          <strong> Links </strong><br/>
+          Visit GitHub!](https://www.github.com) <br /><br/>
+          <strong> Lists </strong><br/>
+          Unordered: Add ( * ) or ( - ) before the words <br />
+          Ordered: Add ( 1.),( 2.), etc...  before the words <br /><br/>
+          <strong> Blockquotes </strong><br/>
+          indicate with a ( > ) before the words <br /><br/>
+          <strong> Formatting </strong><br/>
+          Multiple lines: use triple backticks (```)<br /><br/>
+          <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>More info on Markdown</a>
+      </p>
 
+    </div>
+    <div class="three_fourth actions">
+      <%= f.submit %>
+    </div>
 <% end %>
