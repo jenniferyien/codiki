@@ -15,20 +15,21 @@ class ContributorsController < ApplicationController
   end
   #does an actual login
   def login_post
-    @contributor = Contributor.find_by({email: params[:email]})
-    if @contributor
-      #proceed with login
-      if @contributor.authenticate(params[:password])
-        #password is good
-        session[:contributor_id] = @contributor.id
-        redirect_to '/'
-      else
-        #password is bad
-        redirect_to '/login'
-      end
-      else
-        redirect_to '/login'
-      end
+        @contributor = Contributor.find_by({email: params[:email]})
+        if @contributor
+
+          if @contributor.authenticate(params[:password])
+            #password is good
+            session[:contributor_id] = @contributor.id
+            redirect_to '/'
+          else
+            #password is bad
+            redirect_to '/login', {:flash => { :error => "Insufficient rights!" }}
+          end
+        else
+           redirect_to '/login', {:flash => { :error => "Insufficient rights!" }}
+        end
+
   end
 
   def about
@@ -49,7 +50,11 @@ class ContributorsController < ApplicationController
 
   # GET /contributors/new
   def new
-    @contributor = Contributor.new
+    if current_contributor
+      redirect_to '/'
+    else
+      @contributor = Contributor.new
+    end
   end
 
   # GET /contributors/1/edit
@@ -59,21 +64,16 @@ class ContributorsController < ApplicationController
   # POST /contributors
   # POST /contributors.json
   def create
-    @contributor = Contributor.new(contributor_params)
-
     if current_contributor
       redirect_to articles_path
     else
-      contributor_params = params.require(:contributor).permit(:first_name, :last_name, :email, :password)
-      @contributor = Contributor.new(contributor_params)
+      contributor = params.require(:contributor).permit(:first_name , :last_name, :email, :password)
+      @contributor = Contributor.new(contributor)
       if @contributor.valid?
-        # EVERYTHING IS GREAT PATH
         @contributor.save
         session[:contributor_id] = @contributor.id
         redirect_to '/'
       else
-        # SOMETHING IS WRONG PATH
-        @message = "cannot be blank!"
         render :new
     end
   end
@@ -87,8 +87,8 @@ class ContributorsController < ApplicationController
         format.html { redirect_to @contributor, notice: 'Contributor was successfully updated.' }
         format.json { render :show, status: :ok, location: @contributor }
       else
-        format.html { render :edit }
-        format.json { render json: @contributor.errors, status: :unprocessable_entity }
+        # format.html { render :edit }
+        # format.json { render json: @contributor.errors, status: :unprocessable_entity }
       end
     end
   end

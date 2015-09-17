@@ -1,22 +1,22 @@
+
 <div id= 'registration'>
     <h3>REGISTER FOR AN ACCOUNT</h3>
     <%= form_for(@contributor) do |f| %>
-      
       <div class="field">
         <%= f.label :first_name %><br>
-        <%= f.text_field :first_name %>
+        <%= f.text_field :first_name, placeholder: "e.g. John" %>
       </div>
       <div class="field">
         <%= f.label :last_name %><br>
-        <%= f.text_field :last_name %>
+        <%= f.text_field :last_name, placeholder: "e.g. Doe"%>
       </div>
       <div class="field">
         <%= f.label :email %><br>
-        <%= f.text_field :email %>
+        <%= f.email_field :email, placeholder: "e.g. JohnDoe@gmail.com", oninvalid: "setCustomValidity('Valid email address is required')"%>
       </div>
       <div class="field">
         <%= f.label :password %><br>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, placeholder: "e.g. superPassword123"%>
       </div>
       <div class="actions">
         <%= f.submit :Register %>

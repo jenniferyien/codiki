@@ -11,6 +11,7 @@
 .formbox {
   z-index: 1;
   background-color: #4883A9;
+  margin:1%;
 }
 #registration {
   margin: 0 10%;
@@ -32,6 +33,11 @@ input[type=password] {
   width: 400px;
   margin: 1% 0;
 }
+input[type=email] {
+  width: 400px;
+  margin: 1% 0;
+}
+
 input[type=submit] {
   width: 160px;
   font-size: 20px;
@@ -41,5 +47,12 @@ input[type=submit] {
 .welcomeNote {
   z-index: -1;
   position: absolute;
-  margin: 0 3%;
+  margin: 2% 3%;
+}
+.errorPage {
+  color: red;
+  margin: 2% 3%;
+}
+.flash {
+  color: red;
 }
