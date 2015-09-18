@@ -32,11 +32,13 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rails_12factor'
+
 #use redcarpet to do markdown text
 gem 'redcarpet'
 
 #syncing sendgrid
-gem 'sendgrid'
+gem 'sendgrid-rails', '~> 2.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
