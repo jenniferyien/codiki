@@ -4,15 +4,57 @@
 
 // index
 .hero {
-  background-color: #E2CAA9;
-  min-height: 225px;
+  background-color: #2C3034;
+  min-height: 250px;
 }
 .article {
   margin: 3%;
+  margin-left: 15%;
 }
 
-.intro {
-  margin: 1% 3%;
+.article#linking {
+  background-color: #E6E6E6;
+  padding:  1% 2%;
+  margin: 1% 3% 1% 15%;;
+}
+
+#linking h2 {
+  color: #333C81;
+}
+#linking small {
+  color: #78BFD1;
+}
+
+#linking a {
+  color: #2C3034;
+}
+#linking a:hover {
+  color: #78BFD1;
+}
+.three_fourth hr {
+  width: 120%;
+}
+.full_page.intro {
+  margin: 1% 10%;
+  color: #fff;
+  width: 75%;
+}
+.full_page.intro h1 {
+  font-family: 'Bitter',sans-serif;
+  font-weight: lighter;
+}
+.full_page.intro p{
+  font-family: 'Raleway',serif;
+  line-height: 2em;
+}
+
+.linkRight {
+  text-align: right;
+  margin-right: 5%;
+  font-size: 14px;
+}
+.article h3 {
+  color: #78BFD1;
 }
 
 // show
