@@ -51,11 +51,7 @@ class ContributorsController < ApplicationController
 
   # GET /contributors/new
   def new
-    if current_contributor
-      redirect_to articles_path
-    else
       @contributor = Contributor.new
-    end
   end
 
   # GET /contributors/1/edit
