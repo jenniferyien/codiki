@@ -3,26 +3,31 @@
   <div class='one_fourth categoryNotice'>
       <h1>What would you like to know?</h1>
   </div>
-  <div class='half_page blurb'>
-      <p>Lorem ipsum dolor s nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class='one_fourth blurb'>
+        <p>Check out the different topics we have available. <br>
+          If you dont see anything you like... add your own. <br>
+          Join the community and contribute your ideas. <br>
+          Everyone is welcome.
+        </p>
   </div>
 </div>
 <div>
   <div class='three_fourth'>
-    <div class='category'>
+    <div class='category' id='newCat'>
       <h3>List of Categories</h3>
+      <hr />
     </div>
-    <hr />
-    <div class='category'>
       <% @categories.each do |category| %>
+        <div class='category topics'>
           <h2><%= category.title %>
             <% if current_contributor %>
-            <small><small><small><%= link_to 'edit', edit_category_path(category.id) %></small></small></small>
-          <% end %> </h2>
+            <small> |</small> <small><small><small><%= link_to 'edit', edit_category_path(category.id) %></small></small></small>
+          <% end %>
+            <small> |</small> <small><small><small><%= link_to 'View More', category %></small></small></small>
+          </h2>
           <p><%= markdown(truncate("#{category.summary}",length: 350)) %></p>
-          <button><%= link_to 'View More', category %></button>
+          </div>
       <% end %>
-    </div>
   </div>
 </div>
 <!-- <%# <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td> %> -->

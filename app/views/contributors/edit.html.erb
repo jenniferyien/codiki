@@ -1,11 +1,12 @@
 <div class='nameBanner'>
   <div class='one_fourth name'>
-      <h1><%= "#{@contributor.first_name} #{@contributor.last_name}" %>
-      <p><%= @contributor.email %></p>
-      <button><%= link_to 'Check out other Authors', contributors_path %> </button>
+      <h1>
+        <%= mail_to @contributor.email, image_tag("emailicon.png", :alt => "email icon", size: "30x30") %>
+        <%= "#{@contributor.first_name.capitalize} #{@contributor.last_name.capitalize}" %></h1>
+
   </div>
-  <div class='half_page formbox'>
-    <div id= 'registration'>
+  <div class='half_page formbox newUpdate'>
+    <div id= 'updateAccout'>
         <h3>UPDATE YOUR ACCOUNT</h3>
         <%= form_for(@contributor) do |f| %>
           <div class="field">
@@ -24,7 +25,7 @@
             <%= f.label :password %><br>
             <%= f.password_field :password, placeholder: "e.g. superPassword123"%>
           </div>
-          <div class="actions">
+          <div class="full_page actions">
             <%= f.submit :Update %>
           </div>
         <% end %>

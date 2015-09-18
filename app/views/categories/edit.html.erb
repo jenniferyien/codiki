@@ -1,21 +1,23 @@
 <div class='categoryHead'>
   <div class='one_fourth categoryNotice'>
-      <h1>What would you like to know?</h1>
+      <h1>What topic would you like?</h1>
   </div>
-  <div class='half_page blurb'>
-      <p>Lorem ipsum dolor s nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
+  <div class='one_fourth blurb'>
+    <p>Check out the topics we have available. <br>
+      If you dont see anything you like... add your own. <br>
+      Join the community and contribute your ideas. <br>
+      Everyone is welcome.
+    </p>
+    </div>
 </div>
 <div>
   <div id='categoryNote'>
     <div class='half_page category'>
-      <h3>Category</h3>
-    </div>
-    <div class='half_page'>
+      <h3><%= link_to 'Category', categories_path %></h3>
+        <hr />
     </div>
   </div>
-  <hr />
-    <div class='category'>
+    <div class='category form'>
       <%= render 'form' %>
     </div>
 </div>

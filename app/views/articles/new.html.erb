@@ -2,20 +2,19 @@
   <div class='one_fourth newTitle'>
       <h1>Contributing an Article?</h1>
   </div>
-  <div class='half_page blurb'>
-      <p>Lorem ipsum dolor s nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <button><%= link_to "Check out Article List", articles_path %></button>
+  <div class='one_fourth blurb'>
+        <p>Your ideas are always welcome.<br>
+          There are always different methods to go about doing something. Lets see what other community users can think of. 
+        </p>
   </div>
 </div>
 <div>
   <div id='articleNote'>
     <div class='half_page'>
-        <h3>Article:</h3>
-    </div>
-    <div class='half_page'>
+        <h3><%= link_to 'Article:', articles_path %></h3>
+          <hr />
     </div>
   </div>
-  <hr />
   <div id='actualArticle'>
     <%= form_for(@article) do |f| %>
         <div class='half_page field'>
@@ -43,9 +42,12 @@
           <strong><%= f.label :category_id %></strong><br>
           <%= f.select :category_id, options_for_select(Category.all.collect { |p| [ p.title, p.id ] }) %>
         </div>
-        <div class='three_fourth field'>
+        <div class='half_page field'>
           <strong><%= f.label :content %></strong><br>
-          <%= f.text_area :content, cols: "88", rows: "30" %>
+          <%= f.text_area :content %>
+          <div class="full_page actions">
+            <%= f.submit %>
+          </div>
         </div>
         <div class='one_fourth'>
           <h4>BASIC WRITING GUIDE</h4>
@@ -68,9 +70,6 @@
               Multiple lines: use triple backticks (```)<br /><br/>
               <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>More info on Markdown</a>
           </p>
-        </div>
-        <div class="three_fourth actions">
-          <%= f.submit %>
         </div>
     <% end %>
 

@@ -1,21 +1,25 @@
 <div class='categoryHead'>
   <div class='one_fourth categoryNotice'>
-      <h1>Be a hero and help inform</h1>
+      <h1>Be a hero, <br> help contribute</h1>
   </div>
-  <div class='half_page blurb'>
-    <p>Lorem ipsum dolor s nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class='one_fourth blurb'>
+      <p> Some are more creative than others. <br>
+        Some want more practice than others. <br>
+        Everyone needs a place to go for ideas. <br>
+        Why not check out Codiki?
+      </p>
   </div>
 </div>
 <div>
   <div class='three_fourth'>
-    <div class='contributor'>
+    <div class='contributor authors'>
       <h3>Contributors/Authors:</h3>
+      <hr />
     </div>
-    <hr />
-    <div class='contributor'>
       <% @contributors.each do |contributor| %>
-          <h2><%= "#{contributor.first_name} #{contributor.last_name}" %> <button><%= link_to 'View Details', contributor %></button></h2>
+      <div class='contributor individuals'>
+          <h2><%= "#{contributor.first_name.capitalize} #{contributor.last_name.capitalize}" %> <small> |</small> <small><small><small><%= link_to 'View Details', contributor %></small></small></small></h2>
+        </div>
       <% end %>
-    </div>
   </div>
 </div>

@@ -1,26 +1,29 @@
 <div class='nameBanner'>
   <div class='one_fourth name'>
-      <h1><%= "#{@contributor.first_name} #{@contributor.last_name}" %>
+      <h1>
+        <%= mail_to @contributor.email, image_tag("emailicon.png", :alt => "email icon", size: "30x30") %>
+        <%= "#{@contributor.first_name.capitalize} #{@contributor.last_name.capitalize}" %>
       <% if current_contributor %>
           <% if current_contributor.id == @contributor.id %>
           <small><small><small><small><%= link_to 'Edit', edit_contributor_path(@contributor) %></small></small></small></small>
             <% end %> </h1>
       <% end %>
-      <p><%= @contributor.email %></p>
-      <button><%= link_to 'Check out other Authors', contributors_path %> </button>
   </div>
-  <div class='half_page formbox'>
-    <h3>Articles by <%= "#{@contributor.first_name} #{@contributor.last_name}" %></h3>
+  <div class='half_page formbox articleBox'>
+    <h3>Articles by <%= "#{@contributor.first_name.capitalize} #{@contributor.last_name.capitalize}" %> </h3>
       <% @articles.each do |article| %>
           <% if article.contributor_id == @contributor.id %>
-          <div id='conArticle'>
-            <div id='content'>
-                <h2><%= article.title %></h2>
+          <div class='conArticle'>
+            <div class='content'>
+                <h2><%= article.title %> <small> |</small> <small><small><small><%= link_to 'View More', article %></small></small></small></h2>
                 <p><%= markdown(truncate("#{article.content}",length: 300)) %></p>
-                <button><%= link_to 'View More', article %></button>
             </div>
           </div>
           <% end %>
       <% end %>
+      <div class='newNew'>
+        <p><%= link_to 'Create New Article', new_article_path %></p>
+        <p><%= link_to 'Check out other Contributors', contributors_path %></p>
+      </div>
   </div>
 </div>

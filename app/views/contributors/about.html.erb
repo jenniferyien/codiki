@@ -1,29 +1,36 @@
 <div class='categoryHead'>
-  <div class='one_fourth categoryNotice'>
+  <div class='one_fourth aboutNotice'>
       <h1>About</h1>
   </div>
-  <div class='half_page blurb'>
-      <p>Lorem ipsum dolor s nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class='one_fourth blurb'>
+      <p>You may wonder what is Codiki? <br>
+        Then you need to read more and <br>
+        find out why Codiki exists. <br>
+        Maybe you'll love it and maybe you wont. <br>
+        Either way check it out.
+      </p>
   </div>
 </div>
 <div>
   <div class='full_page'>
-    <div class='category'>
+    <div class='half_page category'>
       <h3>Purpose of this Site</h3>
+      <hr />
     </div>
-    <hr />
-    <div class='category'>
-      <h2>Why Contribute?</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class='category aboutCodiki'>
+      <div class='full_page' id='aboutArticle'>
+        <h2>Why Contribute?</h2>
+        <p>If you're stuck in one an idea or find yourself in a work rut, it can be tough to advance. After all, how do you learn new skills and make yourself a more desirable hire if there's no way for you to practice your skills? Codid has lists of projects contributed by the community that you can use during your free time, this can help add to your resumes but also to pick up the knowledge and experience that will help them move on to bigger and better positions at your current companies or somewhere else altogether.</p>
       <h2>How to Contribute?</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>To contribute ideas, simply register for a accout. Check out what categories/topics we already have. If it is not there, create one (no one is stopping you). Then simply add an article to a category and your done. Simply as that. </p>
       <% if current_contributor %>
-      <p><%= link_to 'Create New Category', new_category_path %> </p>
-      <p><%= link_to 'Create New Article', new_article_path %></p>
+      <p><small> |</small><%= link_to 'Create New Category', new_category_path %> </p>
+      <p><small> |</small><%= link_to 'Create New Article', new_article_path %></p>
       <% end %>
       <h2>Why Register?</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p><%= link_to 'Click here to Register for an Accout', new_contributor_path %></p>
+      <p>Diversity is great and enriches life on many levels, but, particularly when it comes to things like programming. Didn't you have ideas that you thought would be great to see what others come up with? It can be truly rewarding to say you contributed to a community to help others like you become better.</p>
+      <p><small> |</small><%= link_to 'Click here to Register for an Accout', new_contributor_path %></p>
+      </div>
     </div>
   </div>
 </div>

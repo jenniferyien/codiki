@@ -3,7 +3,7 @@
   <div class='full_page intro'>
       <h1>Hello
         <% if current_contributor %>
-        <%= "#{current_contributor.first_name}"%>
+        <%= "#{current_contributor.first_name.capitalize}"%>
         <% end %>,</h1>
         <p>Codiki is a one-stop shop coding project community created by a fellow coder. We are passionate about providing a space for everyone to contribute, experiment, and explore their ideas. Our work is simply to provide project ideas for others to practice and grow their own personal skills. </p>
     <p class='linkRight'><%= link_to 'Learn More', about_path %></p>
@@ -19,7 +19,7 @@
       <hr />
     </div>
       <% @articles.each do |article| %>
-      <div class='article' id='linking'>
+      <div class='article linking'>
           <h2><%= article.title %> <small> |</small> <small><small><small><%= link_to 'View More', article %></small></small></small></h2>
           <p><%= markdown(truncate("#{article.content}",length: 350)) %></p>
           </div>

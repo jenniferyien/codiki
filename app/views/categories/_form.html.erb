@@ -1,5 +1,5 @@
 <%= form_for(@category) do |f| %>
-    <div class='half_page field'>
+    <div class='three_fourth field'>
       <strong><%= f.label :title %></strong><br>
       <%= f.text_field :title %>
     </div>
@@ -12,12 +12,15 @@
       <% end %>
       <% end %>
     </div>
-    <div class='three_fourth field'>
+    <div class='half_page field'>
       <strong><%= f.label :summary %></strong><br>
-      <%= f.text_area :summary, cols: "88", rows: "30" %>
+      <%= f.text_area :summary %>
+      <div class="full_page actions">
+        <%= f.submit %>
+      </div>
     </div>
     <div class='one_fourth'>
-      <h4>BASIC WRITING GUIDE</h4>
+      <h4><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>BASIC WRITING GUIDE FOR MARKDOWN</a></h4>
       <p> <strong> Heading </strong> <br/>
           # The largest heading <br />
           ## The second largest heading <br />
@@ -34,12 +37,7 @@
           <strong> Blockquotes </strong><br/>
           indicate with a ( > ) before the words <br /><br/>
           <strong> Formatting </strong><br/>
-          Multiple lines: use triple backticks (```)<br /><br/>
-          <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>More info on Markdown</a>
+          Multiple lines: use triple backticks (```)
       </p>
-
-    </div>
-    <div class="three_fourth actions">
-      <%= f.submit %>
     </div>
 <% end %>

@@ -41,7 +41,7 @@
       </div>
       <div class='nav'>
           <% if current_contributor %>
-            <p>Logged in as: <%= link_to current_contributor.first_name, contributor_path(current_contributor.id) %></p>
+            <p>Logged in as: <%= link_to current_contributor.first_name.capitalize, contributor_path(current_contributor.id) %></p>
           <% end %>
       </div>
 

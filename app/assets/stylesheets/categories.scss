@@ -2,19 +2,105 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.categoryNotice {
+.one_fourth.categoryNotice {
   line-height: 3em;
-  margin:1.5%;
+  margin: 0;
+  margin-left: 9%;
   text-align: center;
   font-size: 18px;
 }
-.category {
-  margin: 0 3%;
+.one_fourth.categoryNotice h1{
+  margin: 0;
 }
 
-
-
-#CategoryNote{
+.blurb {
+  margin-top: 0;
+  margin-left: 5%;
+}
+.category {
   margin: 0 3%;
-  height: 40px;
+  margin-left: 15%;
+}
+.categoryHead {
+  background-color: #2C3034;
+  color: #fff;
+}
+.category.topics {
+  background-color: #E6E6E6;
+  padding:  1% 2%;
+  margin: 1% 3% 1% 15%;;
+}
+
+.category.topics h2 {
+  color: #333C81;
+}
+.category.topics small {
+  color: #78BFD1;
+}
+.category.topics a {
+  color: #2C3034;
+}
+.category.topics a:hover {
+  color: #78BFD1;
+}
+.category h3 {
+  color: #78BFD1;
+}
+
+// edit
+
+.half_page.category {
+  margin-left: 10%;
+}
+.half_page.category a {
+  color: #78BFD1;
+}
+.half_page.category a:hover {
+  color: #2C3034;
+}
+.category.form {
+  margin-left: 10%;
+}
+
+textarea {
+  width: 400px;
+  height: 460px;
+}
+label {
+  font-family: 'Bitter',sans-serif;
+}
+.one_fourth h4 a {
+  color: #78BFD1;
+}
+.one_fourth h4 a:hover {
+  color: #2C3034;
+}
+.full_page.actions input[type=submit]{
+  background-color: #78BFD1;
+  border-radius: 20px;
+  font-size: 12px;
+  border: none;
+  color: #fff;
+  float: right;
+  margin-right: 5%;
+}
+
+.full_page.actions input[type=submit]:hover{
+  background-color: #2C3034;
+  color: #78BFD1;
+}
+
+#categoryNote hr {
+  width: 140%;
+}
+
+// new
+
+.one_fourth.categoryNotice.newTopic{
+  line-height: 3em;
+  margin: 0;
+  margin-top: 2%;
+  margin-left: 9%;
+  text-align: center;
+  font-size: 18px;
 }

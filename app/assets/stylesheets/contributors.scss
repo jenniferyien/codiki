@@ -2,11 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .banner{
-  height: 50px;
+  height: 150px;
   background-color: #2C3034;
 }
 .intro {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 3em;
+  color: #fff;
+  margin-left: 10%;
+  margin-right: 0;
+  width: 50px;
+}
+.intro h1 {
+  margin: 0;
+  padding: 0;
 }
 .formbox {
   z-index: 1;
@@ -25,6 +34,11 @@
 
 #registration .actions {
   text-align: center;
+}
+
+.half_page.formbox.thelogin{
+  margin-top: 10%;
+  margin-right:0;
 }
 
 #loginbox {
@@ -47,10 +61,12 @@ input[type=text] {
 input[type=password] {
   width: 400px;
   margin: 1% 0;
+  font-size: 12px;
 }
 input[type=email] {
   width: 400px;
   margin: 1% 0;
+  font-size: 12px;
 }
 
 input[type=submit] {
@@ -69,6 +85,10 @@ input[type=submit] {
   z-index: -1;
   position: absolute;
   margin: 1% 3%;
+  margin-left: 10%;
+}
+.welcomeBackNote p{
+  width: 70%;
 }
 
 
@@ -85,38 +105,144 @@ input[type=submit] {
 .contributor {
   margin: 0 3%;
 }
+.contributor.individuals {
+  background-color: #E6E6E6;
+  padding:  1% 2%;
+  margin: 1% 3% 1% 15%;;
+}
+.contributor.individuals a {
+  color: #2C3034;
+}
+.contributor.individuals a:hover {
+  color: #78BFD1;
+}
+.contributor.authors {
+  margin-left: 15%;
+}
+.contributor h3 {
+  color: #78BFD1;
+}
 
+.contributor h2 {
+  color: #333C81;
+}
+.contributor small {
+  color: #78BFD1;
+}
 .name {
   font-size: 14px;
   text-align: center;
   margin: 3% 0;
+  color: #fff;
 }
 .nameBanner{
   height: 150px;
   background-color: #2C3034;
 }
 
-#conArticle {
-  background-color: #fff;
-  width: 90%;
-  margin: 2% 5%;
+.conArticle {
+  background-color: #E6E6E6;
+  padding:  1% 2%;
+  margin: 1% 3%;
 }
-#conArticle #content{
+.conArticle.content{
   margin: 3%;
 }
+
+.content h2 a {
+  color: #2C3034;
+}
+.content h2 a:hover {
+  color: #78BFD1;
+}
+.content h2 {
+  color: #333C81;
+}
+.content small {
+  color: #78BFD1;
+}
+
 .half_page.formbox h3{
   color: #fff;
-  margin: 3% 5%;
+  margin: 3%;
 }
+.half_page.formbox.articleBox {
+  min-height: 500px;
+}
+.half_page.formbox.articleBox .newNew p {
+  text-align:center;
+}
+
 
 // contact page
 .question {
   line-height: 3em;
-  text-align: center;
-  margin: 3%;
+  text-align: left;
+  margin: 0 3%;
+  margin-left: 28%;
+  font-size: 16px;
+  color: #fff;
 }
+#contactUs {
+  margin: 2% 15% 5% 25%;
+}
+
 #contactUs h3 {
   font-size: 30px;
   margin-top: 15%;
+  margin-left: 25%;
+  text-align: left;
+}
+image {
+  width: 50%;
+}
+// about
+.category.aboutCodiki{
+  margin-left: 10%;
+  width: 70%;
+}
+.half_page.category hr{
+  width: 150%;
+}
+#aboutArticle h2  {
+  color: #78BFD1;
+}
+#aboutArticle p a {
+  color: #2C3034;
+}
+#aboutArticle p a:hover {
+  color: #78BFD1;
+}
+#aboutArticle p small {
+  color: #78BFD1;
+}
+.one_fourth.aboutNotice {
+  line-height: 3em;
+  margin: 3% 0;
+  margin-left: 9%;
   text-align: center;
+  font-size: 18px;
+}
+.one_fourth.aboutNotice h1{
+  margin: 0;
+}
+
+//update/edit
+
+#updateAccout {
+  margin: 5% 10%;
+  color: #fff;
+}
+
+#updateAccout h3 {
+  text-align: center;
+}
+
+#updateAccout .actions input[type=submit] {
+  margin-right: 30%;
+
+}
+
+.half_page.formbox.newUpdate {
+  min-height: 340px;
 }

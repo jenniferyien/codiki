@@ -70,7 +70,7 @@ class ContributorsController < ApplicationController
         @contributor.save
         session[:contributor_id] = @contributor.id
         redirect_to articles_path
-        # UserNotifier.send_signup_email(@contributor).deliver
+        UserNotifier.send_signup_email(@contributor).deliver
       else
         render :new
     end

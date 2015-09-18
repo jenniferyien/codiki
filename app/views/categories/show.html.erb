@@ -2,24 +2,23 @@
   <div class='one_fourth categoryNotice'>
       <h1><%= @category.title %></h1>
   </div>
-  <div class='half_page blurb'>
-      <p><%= @category.summary %></p>
+  <div class='one_fourth blurb'>
+      <p><%= markdown(@category.summary) %></p>
   </div>
 </div>
 <div>
   <div class='three_fourth'>
     <div class='category'>
-      <h3><%= @category.title %>:Articles:</h3>
+      <h3><%= @category.title %>: Articles:</h3>
+        <hr />
     </div>
-    <hr />
-    <div class='category'>
       <% @articles.each do |article| %>
           <% if article.category_id == @category.id %>
-          <h2><%= article.title %></h2>
+          <div class='category topics'>
+          <h2><%= article.title %><small> |</small> <small><small><small><%= link_to 'View More', article %></small></small></small></h2>
           <p><%= markdown(truncate("#{article.content}",length: 350)) %></p>
-          <button><%= link_to 'View More', article %></button>
+          </div>
           <% end %>
       <% end %>
-    </div>
   </div>
 </div>

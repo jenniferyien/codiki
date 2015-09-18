@@ -1,8 +1,8 @@
 <div class='banner'>
   <div class='one_fourth intro'>
-      <h1>Welcome</h1>
+      <h1>You're back!</h1>
   </div>
-  <div class='half_page formbox'>
+  <div class='half_page formbox thelogin'>
     <div id='loginbox'>
         <h3>Please Log In</h3>
         <%= form_tag login_path do %>
@@ -22,10 +22,12 @@
   </div>
 </div>
 <div class='one_fourth welcomeBackNote'>
-    <h3>We're happy to have y ou join us!</h3>
-    <p>Lorem ipsum dolor sit amet,t labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud at qui officia deserunt mollit anim id est laborum.</p>
+    <h3>It's great to be back. </h3>
+    <p>We're glad to see you again. <br>
+      Now let's login and get started.
+    </p>
     <% flash.each do |key, value| %>
-     <div class="flash <%= key %>"><%= "The Email Address or Password entered is invalid or does not match our records. Please try again." %></div>
+     <div class="flash <%= key %>"><p><%= "The Email Address or Password entered is invalid or does not match our records. Please try again." %></p></div>
     <% end %>
 
 </div>
