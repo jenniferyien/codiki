@@ -3,7 +3,7 @@ class ContributorsController < ApplicationController
 
   def login
     if current_contributor
-      redirect_to '/'
+      redirect_to articles_path
     else
       render :login
     end
@@ -11,7 +11,7 @@ class ContributorsController < ApplicationController
 
   def logout
     session[:contributor_id]=nil
-    redirect_to '/'
+    redirect_to articles_path
   end
   #does an actual login
   def login_post
@@ -21,7 +21,7 @@ class ContributorsController < ApplicationController
           if @contributor.authenticate(params[:password])
             #password is good
             session[:contributor_id] = @contributor.id
-            redirect_to '/'
+            redirect_to articles_path
           else
             #password is bad
             redirect_to '/login', {:flash => { :error => "Insufficient rights!" }}
@@ -52,7 +52,7 @@ class ContributorsController < ApplicationController
   # GET /contributors/new
   def new
     if current_contributor
-      redirect_to '/'
+      redirect_to articles_path
     else
       @contributor = Contributor.new
     end
@@ -73,7 +73,7 @@ class ContributorsController < ApplicationController
       if @contributor.valid?
         @contributor.save
         session[:contributor_id] = @contributor.id
-        redirect_to '/'
+        redirect_to articles_path
         UserNotifier.send_signup_email(@contributor).deliver
       else
         render :new
