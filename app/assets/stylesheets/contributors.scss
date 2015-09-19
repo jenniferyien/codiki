@@ -9,22 +9,39 @@
   font-size: 18px;
   line-height: 3em;
   color: #fff;
-  margin-left: 10%;
-  margin-right: 0;
-  width: 50px;
+  margin: 3% 0 3% 15%;
+  text-align: center;
 }
+
 .intro h1 {
   margin: 0;
   padding: 0;
 }
+.full_page.intro{
+  text-align: left;
+  margin-left: 5%;
+
+}
+
 .formbox {
   z-index: 1;
   background-color: #4883A9;
   margin:1%;
   min-height: 200px;
+  max-width: 520px;
 }
+
+.full_page.formbox.registrationBox {
+  min-height: 350px;
+  margin: 1% 0;
+  float:right;
+  margin-top: -10%;
+  margin-right: 5%;
+}
+
+
 #registration {
-  margin: 0 10%;
+  margin: 5% 10%;
   color: #fff;
 }
 
@@ -32,17 +49,20 @@
   text-align: center;
 }
 
-#registration .actions {
-  text-align: center;
+#registration .actions input[type=submit] {
+  margin-right: 30%;
 }
 
-.half_page.formbox.thelogin{
-  margin-top: 10%;
-  margin-right:0;
+.full_page.formbox.thelogin {
+  min-height: 300px;
+  margin: 1% 0;
+  float:right;
+  margin-top: -10%;
+  margin-right: 5%;
 }
 
 #loginbox {
-  margin: 5% 10%;
+  margin: 10%;
   color: #fff;
 }
 
@@ -50,8 +70,8 @@
   text-align: center;
 }
 
-#loginbox .actions {
-  text-align: center;
+#loginbox .actions input[type=submit]{
+  margin-right: 30%;
 }
 
 input[type=text] {
@@ -79,6 +99,13 @@ input[type=submit] {
   z-index: -1;
   position: absolute;
   margin: 2% 3%;
+  margin-left: 10%;
+}
+.welcomeNote p{
+  width: 80%;
+}
+.welcomeNote ul{
+  width: 80%;
 }
 
 .welcomeBackNote {
@@ -131,8 +158,8 @@ input[type=submit] {
 }
 .name {
   font-size: 14px;
-  text-align: center;
-  margin: 3% 0;
+  text-align: left;
+  margin: 3% 0 3% 8%;
   color: #fff;
 }
 .nameBanner{
@@ -162,14 +189,18 @@ input[type=submit] {
   color: #78BFD1;
 }
 
-.half_page.formbox h3{
+.full_page.formbox h3{
   color: #fff;
   margin: 3%;
 }
-.half_page.formbox.articleBox {
+.full_page.formbox.articleBox {
   min-height: 500px;
+  margin: 1% 0;
+  float:right;
+  margin-top: -10%;
+  margin-right: 5%;
 }
-.half_page.formbox.articleBox .newNew p {
+.full_page.formbox.articleBox .newNew p {
   text-align:center;
 }
 
@@ -177,21 +208,20 @@ input[type=submit] {
 // contact page
 .question {
   line-height: 3em;
-  text-align: left;
+  text-align: center;
   margin: 0 3%;
-  margin-left: 28%;
   font-size: 16px;
   color: #fff;
 }
 #contactUs {
   margin: 2% 15% 5% 25%;
+  text-align: center;
 }
 
 #contactUs h3 {
   font-size: 30px;
-  margin-top: 15%;
-  margin-left: 25%;
-  text-align: left;
+  margin: 6% 0;
+  margin-top: 12%;
 }
 image {
   width: 50%;
@@ -216,14 +246,13 @@ image {
 #aboutArticle p small {
   color: #78BFD1;
 }
-.one_fourth.aboutNotice {
+.full_page.aboutNotice {
   line-height: 3em;
-  margin: 3% 0;
-  margin-left: 9%;
+  margin: 0;
   text-align: center;
   font-size: 18px;
 }
-.one_fourth.aboutNotice h1{
+.full_page.aboutNotice h1{
   margin: 0;
 }
 
@@ -243,6 +272,13 @@ image {
 
 }
 
-.half_page.formbox.newUpdate {
+.full_page.formbox.newUpdate {
   min-height: 340px;
+}
+.full_page.formbox.newUpdate {
+  min-height: 350px;
+  margin: 1% 0;
+  float:right;
+  margin-top: -10%;
+  margin-right: 5%;
 }

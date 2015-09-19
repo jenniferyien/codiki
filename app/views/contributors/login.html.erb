@@ -1,28 +1,30 @@
 <div class='banner'>
-  <div class='one_fourth intro'>
-      <h1>You're back!</h1>
-  </div>
-  <div class='half_page formbox thelogin'>
-    <div id='loginbox'>
-        <h3>Please Log In</h3>
-        <%= form_tag login_path do %>
-          <div class='field'>
-              <%= label_tag :email %>
-              <%= text_field_tag :email, params[:email],placeholder: "e.g. JohnDoe@gmail.com", oninvalid: "setCustomValidity('Valid email address is required')" %>
-          </div>
-          <div class='field'>
-              <%= label_tag :password %>
-              <%= password_field_tag :password %>
-          </div>
-          <div class='actions'>
-              <%= submit_tag "Login" %>
-          </div>
-        <% end %>
-     </div>
+  <div class='headBanner'>
+    <div class='full_page intro'>
+        <h1>You're back!</h1>
+    </div>
+    <div class='full_page formbox thelogin'>
+      <div id='loginbox'>
+          <h3>PLEASE LOGIN</h3>
+          <%= form_tag login_path do %>
+            <div class='field'>
+                <%= label_tag :email %>
+                <%= text_field_tag :email, params[:email],placeholder: "e.g. JohnDoe@gmail.com", oninvalid: "setCustomValidity('Valid email address is required')" %>
+            </div>
+            <div class='field'>
+                <%= label_tag :password %>
+                <%= password_field_tag :password %>
+            </div>
+            <div class='full_page actions'>
+                <%= submit_tag "Login" %>
+            </div>
+          <% end %>
+       </div>
+    </div>
   </div>
 </div>
 <div class='one_fourth welcomeBackNote'>
-    <h3>It's great to be back. </h3>
+    <h3>Aren't you glad to be back. </h3>
     <p>We're glad to see you again. <br>
       Now let's login and get started.
     </p>

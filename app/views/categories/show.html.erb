@@ -1,9 +1,11 @@
 <div class='categoryHead'>
-  <div class='one_fourth categoryNotice'>
-      <h1><%= @category.title %></h1>
-  </div>
-  <div class='one_fourth blurb'>
-      <p><%= markdown(@category.summary) %></p>
+  <div class='headBanner'>
+      <div class='full_page categoryNotice'>
+          <h1><%= @category.title %></h1>
+      </div>
+      <div class='full_page blurb'>
+          <p><%= markdown(@category.summary) %></p>
+      </div>
   </div>
 </div>
 <div>

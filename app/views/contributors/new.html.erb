@@ -1,14 +1,16 @@
 <div class='banner'>
-  <div class='one_fourth intro'>
-      <h1>Welcome</h1>
-  </div>
-  <div class='half_page formbox'>
-    <%= render 'form' %>
+  <div class='headBanner'>
+      <div class='full_page intro'>
+          <h1>Decided to Join?</h1>
+      </div>
+      <div class='full_page formbox registrationBox'>
+        <%= render 'form' %>
+      </div>
   </div>
 </div>
 <div class='one_fourth welcomeNote'>
-    <h3>We're happy to have y ou join us!</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h3>We're happy to have you join us!</h3>
+    <p>Creating an accout is the first step into becoming a Codiki Community Member.</p>
     <ul class='errorPage'>
       <% @contributor.errors.each do |field, error| %>
           <% if field.to_s.humanize == 'Email' %>

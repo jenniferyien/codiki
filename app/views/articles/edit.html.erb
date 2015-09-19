@@ -1,10 +1,12 @@
 <div class='categoryHead'>
-  <div class='one_fourth title'>
-      <h1><%= @article.category.title %></h1>
-  </div>
-  <div class='one_fourth blurb'>
-      <p><%= markdown("#{@article.category.summary}") %></p>
-  </div>
+  <div class='headBanner'>
+      <div class='full_page title'>
+          <h1><%= @article.category.title %></h1>
+      </div>
+      <div class='full_page blurb'>
+          <p><%= markdown("#{@article.category.summary}") %></p>
+      </div>
+    </div>
 </div>
 <div>
   <div id='articleNote'>
