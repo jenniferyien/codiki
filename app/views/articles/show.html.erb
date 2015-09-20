@@ -11,36 +11,36 @@
 </div>
 <div class= 'headBanner'>
     <div id='articleNote'>
-      <div class='half_page titleCard'>
-          <h3><%= link_to "#{@article.category.title}", category_path("#{@article.category.id}") %>: Article:</h3>
-          <hr />
-      </div>
-      <div class='half_page'>
-        <% if current_contributor %>
-          <p><%= link_to 'Edit Article', edit_article_path(@article) %><p>
-        <% end %>
-      </div>
+        <div class='half_page titleCard'>
+            <h3><%= link_to "#{@article.category.title}", category_path("#{@article.category.id}") %>: Article:</h3>
+            <hr />
+        </div>
+        <div class='half_page'>
+          <% if current_contributor %>
+            <p><%= link_to 'Edit Article', edit_article_path(@article) %><p>
+          <% end %>
+        </div>
     </div>
     <div id='actualArticle'>
-      <div class='half_page' id='articleUpdate'>
-        <h2><%= @article.title %></h2>
-      </div>
-      <div class='half_page' id='update'>
-        <p id='timestamp'><%= (@article.created_at).strftime("%b-%d-%Y") %></p>
-        <p>
-          <strong>Updated:</strong>
-          <%= time_ago_in_words(@article.updated_at) %>
-        </p>
-      </div>
-      <div class='three_fourth'>
-          <p>
-            <strong>By:</strong>
-            <%= "#{@article.contributor.first_name.capitalize} #{@article.contributor.last_name.capitalize}" %>
-          </p>
-      </div>
-      <div class='full_page artContent'>
-        <p><%= markdown("#{@article.content}") %></p>
-      </div>
+        <div class='half_page' id='articleUpdate'>
+              <h2><%= @article.title %></h2>
+        </div>
+        <div class='half_page' id='update'>
+            <p id='timestamp'><%= (@article.created_at).strftime("%b-%d-%Y") %></p>
+            <p>
+              <strong>Updated:</strong>
+              <%= time_ago_in_words(@article.updated_at) %>
+            </p>
+        </div>
+        <div class='three_fourth'>
+              <p>
+                <strong>By:</strong>
+                <%= "#{@article.contributor.first_name.capitalize} #{@article.contributor.last_name.capitalize}" %>
+              </p>
+        </div>
+        <div class='full_page artContent'>
+            <p><%= markdown("#{@article.content}") %></p>
+        </div>
     </div>
 
 </div>

@@ -1,22 +1,22 @@
 <%= form_for(@article) do |f| %>
     <div class='half_page field'>
-      <strong><%= f.label :title %></strong><br>
-      <%= f.text_field :title %>
+        <strong><%= f.label :title %></strong><br>
+        <%= f.text_field :title %>
     </div>
     <div class='half_page messages'>
-      <% @article.errors.each do |field, error| %>
-        <% if field.to_s.humanize == 'Category' %>
-            <li><%= "#{field.to_s.humanize} must be selected" %></li>
-        <% elsif field.to_s.humanize == 'Content' %>
-            <li><%= "#{field.to_s.humanize} must be entered, it can't be blank" %></li>
-        <% elsif field.to_s.humanize == 'Title' %>
-            <li><%= "#{field.to_s.humanize} is required" %></li>
+        <% @article.errors.each do |field, error| %>
+          <% if field.to_s.humanize == 'Category' %>
+              <li><%= "#{field.to_s.humanize} must be selected" %></li>
+          <% elsif field.to_s.humanize == 'Content' %>
+              <li><%= "#{field.to_s.humanize} must be entered, it can't be blank" %></li>
+          <% elsif field.to_s.humanize == 'Title' %>
+              <li><%= "#{field.to_s.humanize} is required" %></li>
           <% end %>
-      <% end %>
+        <% end %>
     </div>
     <div class='three_fourth field'>
       <strong><%= f.label :category_id %></strong><br>
-      <%= f.select :category_id, options_for_select(Category.all.collect { |p| [ p.title, p.id ] }), include_blank: false %>
+      <%= f.select :category_id, options_for_select(Category.all.collect { |p| [ p.title, p.id ] }), include_blank: true %>
     </div>
     <div class='half_page field'>
       <strong><%= f.label :content %></strong><br>

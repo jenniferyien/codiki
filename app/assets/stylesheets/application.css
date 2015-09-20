@@ -29,12 +29,13 @@ body {
   color: #2C3034;
   height: 100%;
 }
+
 #container {
    min-height:100%;
    height: 100%;
    margin-bottom: -160px;
-   /*position:relative;*/
 }
+
 #container::after {
   display: block;
 }
@@ -49,6 +50,7 @@ header {
 footer #container:after {
   height: 160px;
 }
+
 footer {
   width: 100%;
   text-align: right;
@@ -70,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 hr {
   width: 850px;
 }
+
 #copyright{
   margin:1% 0;
   font-size: 10px;
@@ -86,16 +89,18 @@ a:link{
   text-decoration: none;
   color: #fff;
 }
+
 a:visited {
     color: #fff;
 }
+
 a:active {
     color: #fff;
 }
+
 a:hover {
     color: #78BFD1;
 }
-
 
 /*half page divs*/
 .half_page{
@@ -118,7 +123,6 @@ a:hover {
   width: 33%;
   float: left;
 }
-
 
 .full_page{
   width: 100%;
@@ -145,43 +149,43 @@ a:hover {
  }
 
 /*size of arrow*/
- .menu .arrow {
-     font-size:11px;
-     line-height:0%;
- }
+.menu .arrow {
+   font-size:11px;
+   line-height:0%;
+}
 
 /*makes sure the li in inline with the arrow*/
- .menu > ul > li {
-     display:inline-block;
-     position:relative;
- }
+.menu > ul > li {
+   display:inline-block;
+   position:relative;
+}
 
 /*makes sure box is in front of all values/box with li opacity*/
- .menu li:hover .sub-menu {
-     z-index:1;
-     opacity:1;
- }
+.menu li:hover .sub-menu {
+   z-index:1;
+   opacity:1;
+}
 
  /*background color and menu position*/
-  .sub-menu {
-      /*makes sure position of box does not interfer with div*/
-      position:absolute;
-      /*position of box under arrow*/
-      left:-75px;
-      top: 27px;
-      opacity:0;
-      background:#2C3034;
-  }
+.sub-menu {
+    /*makes sure position of box does not interfer with div*/
+    position:absolute;
+    /*position of box under arrow*/
+    left:-75px;
+    top: 27px;
+    opacity:0;
+    background:#2C3034;
+}
 
 /*font size  */
-  .sub-menu li {
-      font-size:12px;
-  }
+.sub-menu li {
+    font-size:12px;
+}
 
- .sub-menu li a {
-     margin:8px 15px;
-     display:block;
- }
+.sub-menu li a {
+   margin:8px 15px;
+   display:block;
+}
 
 .headBanner.footer {
   min-height: 100px;

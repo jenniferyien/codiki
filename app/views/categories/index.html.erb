@@ -1,36 +1,35 @@
 <!-- <%# <p id="notice"><%= notice %></p> %> -->
-
-    <div class='categoryHead'>
-      <div class='headBanner'>
-          <div class='full_page categoryNotice'>
-              <h1>What would you like to know?</h1>
-          </div>
-          <div class='full_page blurb'>
-                <p>Check out the different topics we have available.
-                  If you dont see anything you like... add your own. <br>
-                  Join the community and contribute your ideas.
-                  Everyone is welcome.
-                </p>
-          </div>
-      </div>
+<div class='categoryHead'>
+    <div class='headBanner'>
+        <div class='full_page categoryNotice'>
+            <h1>What would you like to know?</h1>
+        </div>
+        <div class='full_page blurb'>
+              <p>Check out the different topics we have available.
+                If you dont see anything you like... add your own. <br>
+                Join the community and contribute your ideas.
+                Everyone is welcome.
+              </p>
+        </div>
     </div>
+</div>
 <div class='headBanner'>
-  <div class='three_fourth' id='catList'>
-    <div class='category' id='newCat'>
-      <h3>List of Categories</h3>
-      <hr />
-    </div>
+    <div class='three_fourth' id='catList'>
+      <div class='category' id='newCat'>
+        <h3>List of Categories</h3>
+        <hr />
+      </div>
       <% @categories.each do |category| %>
-        <div class='category topics'>
-          <h2><%= category.title %>
-            <% if current_contributor %>
-            <small> |</small> <small><small><small><%= link_to 'edit', edit_category_path(category.id) %></small></small></small>
-          <% end %>
-            <small> |</small> <small><small><small><%= link_to 'View More', category %></small></small></small>
-          </h2>
-          <p><%= markdown(truncate("#{category.summary}",length: 350)) %></p>
+          <div class='category topics'>
+                <h2><%= category.title %>
+                  <% if current_contributor %>
+                      <small> |</small> <small><small><small><%= link_to 'edit', edit_category_path(category.id) %></small></small></small>
+                  <% end %>
+                  <small> |</small> <small><small><small><%= link_to 'View More', category %></small></small></small>
+                </h2>
+                <p><%= markdown(truncate("#{category.summary}",length: 350)) %></p>
           </div>
       <% end %>
-  </div>
+    </div>
 </div>
 <!-- <%# <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td> %> -->

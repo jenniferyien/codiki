@@ -5,39 +5,39 @@
     </div>
     <div class='half_page messages'>
       <% @category.errors.each do |field, error| %>
-      <% if field.to_s.humanize == 'Title' %>
-          <li><%= "#{field.to_s.humanize} must be entered and no more than 18 characters" %></li>
-      <% elsif field.to_s.humanize == 'Summary' %>
-          <li><%= "#{field.to_s.humanize} can't exceed no more than 265 characters" %></li>
-      <% end %>
+          <% if field.to_s.humanize == 'Title' %>
+              <li><%= "#{field.to_s.humanize} must be entered and no more than 18 characters" %></li>
+          <% elsif field.to_s.humanize == 'Summary' %>
+              <li><%= "#{field.to_s.humanize} can't exceed no more than 265 characters" %></li>
+          <% end %>
       <% end %>
     </div>
     <div class='half_page field'>
-      <strong><%= f.label :summary %></strong><br>
-      <%= f.text_area :summary %>
-      <div class="full_page actions">
-        <%= f.submit %>
-      </div>
+        <strong><%= f.label :summary %></strong><br>
+        <%= f.text_area :summary %>
+        <div class="full_page actions">
+            <%= f.submit %>
+        </div>
     </div>
     <div class='one_fourth markdownGuide'>
-      <h4><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>BASIC WRITING GUIDE FOR MARKDOWN</a></h4>
-      <p> <strong> Heading </strong> <br/>
-          # The largest heading <br />
-          ## The second largest heading <br />
-          … <br />
-          ###### The 6th largest heading<br /><br/>
-          <strong> Styling </strong><br/>
-          Italic: *This text will be italic* <br/>
-          Bold: **This text will be bold** <br/><br/>
-          <strong> Links </strong><br/>
-          Visit GitHub!](https://www.github.com) <br /><br/>
-          <strong> Lists </strong><br/>
-          Unordered: Add ( * ) or ( - ) before the words <br />
-          Ordered: Add ( 1.),( 2.), etc...  before the words <br /><br/>
-          <strong> Blockquotes </strong><br/>
-          indicate with a ( > ) before the words <br /><br/>
-          <strong> Formatting </strong><br/>
-          Multiple lines: use triple backticks (```)
-      </p>
+        <h4><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>BASIC WRITING GUIDE FOR MARKDOWN</a></h4>
+        <p> <strong> Heading </strong> <br/>
+            # The largest heading <br />
+            ## The second largest heading <br />
+            … <br />
+            ###### The 6th largest heading<br /><br/>
+            <strong> Styling </strong><br/>
+            Italic: *This text will be italic* <br/>
+            Bold: **This text will be bold** <br/><br/>
+            <strong> Links </strong><br/>
+            Visit GitHub!](https://www.github.com) <br /><br/>
+            <strong> Lists </strong><br/>
+            Unordered: Add ( * ) or ( - ) before the words <br />
+            Ordered: Add ( 1.),( 2.), etc...  before the words <br /><br/>
+            <strong> Blockquotes </strong><br/>
+            indicate with a ( > ) before the words <br /><br/>
+            <strong> Formatting </strong><br/>
+            Multiple lines: use triple backticks (```)
+        </p>
     </div>
 <% end %>

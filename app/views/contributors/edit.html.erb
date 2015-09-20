@@ -7,32 +7,32 @@
 
       </div>
       <div class='full_page formbox newUpdate'>
-        <div id= 'updateAccout'>
-            <h3>UPDATE YOUR ACCOUNT</h3>
-            <%= form_for(@contributor) do |f| %>
-              <div class="field">
-                <%= f.label :first_name %><br>
-                <%= f.text_field :first_name, placeholder: "e.g. John" %>
-              </div>
-              <div class="field">
-                <%= f.label :last_name %><br>
-                <%= f.text_field :last_name, placeholder: "e.g. Doe"%>
-              </div>
-              <div class="field">
-                <%= f.label :email %><br>
-                <%= f.email_field :email, placeholder: "e.g. JohnDoe@gmail.com", oninvalid: "setCustomValidity('Valid email address is required')"%>
-              </div>
-              <div class="field">
-                <%= f.label :password %><br>
-                <%= f.password_field :password, placeholder: "e.g. superPassword123"%>
-              </div>
-              <div class="full_page actions">
-                <%= f.submit :Update %>
-              </div>
-            <% end %>
-        </div>
+          <div id= 'updateAccout'>
+              <h3>UPDATE YOUR ACCOUNT</h3>
+              <%= form_for(@contributor) do |f| %>
+                <div class="field">
+                  <%= f.label :first_name %><br>
+                  <%= f.text_field :first_name, placeholder: "e.g. John" %>
+                </div>
+                <div class="field">
+                  <%= f.label :last_name %><br>
+                  <%= f.text_field :last_name, placeholder: "e.g. Doe"%>
+                </div>
+                <div class="field">
+                  <%= f.label :email %><br>
+                  <%= f.email_field :email, placeholder: "e.g. JohnDoe@gmail.com", oninvalid: "setCustomValidity('Valid email address is required')"%>
+                </div>
+                <div class="field">
+                  <%= f.label :password %><br>
+                  <%= f.password_field :password, placeholder: "e.g. superPassword123"%>
+                </div>
+                <div class="full_page actions">
+                  <%= f.submit :Update %>
+                </div>
+              <% end %>
+          </div>
       </div>
-    </div>
+  </div>
 </div>
 <div class='one_fourth welcomeNote'>
     <ul class='errorPage'id='errorNotice'>

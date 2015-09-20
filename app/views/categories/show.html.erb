@@ -10,16 +10,16 @@
 </div>
 <div class='headBanner'>
   <div class='three_fourth' id='catShow'>
-    <div class='category'>
-      <h3><%= @category.title %>: Articles:</h3>
-        <hr />
-    </div>
+      <div class='category'>
+        <h3><%= @category.title %>: Articles:</h3>
+          <hr />
+      </div>
       <% @articles.each do |article| %>
           <% if article.category_id == @category.id %>
-          <div class='category topics'>
-          <h2><%= article.title %><small> |</small> <small><small><small><%= link_to 'View More', article %></small></small></small></h2>
-          <p><%= markdown(truncate("#{article.content}",length: 350)) %></p>
-          </div>
+              <div class='category topics'>
+                  <h2><%= article.title %><small> |</small> <small><small><small><%= link_to 'View More', article %></small></small></small></h2>
+                  <p><%= markdown(truncate("#{article.content}",length: 350)) %></p>
+              </div>
           <% end %>
       <% end %>
   </div>

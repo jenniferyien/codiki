@@ -10,21 +10,21 @@
             Why not check out Codiki?
           </p>
       </div>
-    </div>
+  </div>
 </div>
 <div class='headBanner'>
-  <div class='three_fourth titleCard'>
-    <div class='contributor authors'>
-      <h3>Contributors/Authors:</h3>
-      <hr />
-    </div>
-      <% @contributors.each do |contributor| %>
-      <div class='contributor individuals'>
-          <h2><%= "#{contributor.first_name.capitalize} #{contributor.last_name.capitalize}" %> <small> |</small> <small><small><small><%= link_to 'View Details', contributor %></small></small></small></h2>
+    <div class='three_fourth titleCard'>
+        <div class='contributor authors'>
+          <h3>Contributors/Authors:</h3>
+          <hr />
         </div>
-      <% end %>
-  </div>
-  <div class='full_page contributor individuals become'>
-      <p>Become a contributor and register for Codiki<p>
-  </div>
+        <% @contributors.each do |contributor| %>
+            <div class='contributor individuals'>
+                <h2><%= "#{contributor.first_name.capitalize} #{contributor.last_name.capitalize}" %> <small> |</small> <small><small><small><%= link_to 'View Details', contributor %></small></small></small></h2>
+            </div>
+        <% end %>
+    </div>
+    <div class='full_page contributor individuals become'>
+        <p>Become a contributor and register for Codiki<p>
+    </div>
 </div>

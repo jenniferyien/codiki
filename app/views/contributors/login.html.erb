@@ -4,22 +4,22 @@
         <h1>You're back!</h1>
     </div>
     <div class='full_page formbox thelogin'>
-      <div id='loginbox'>
-          <h3>PLEASE LOGIN</h3>
-          <%= form_tag login_path do %>
-            <div class='field'>
-                <%= label_tag :email %>
-                <%= text_field_tag :email, params[:email],placeholder: "e.g. JohnDoe@gmail.com", oninvalid: "setCustomValidity('Valid email address is required')" %>
-            </div>
-            <div class='field'>
-                <%= label_tag :password %>
-                <%= password_field_tag :password %>
-            </div>
-            <div class='full_page actions'>
-                <%= submit_tag "Login" %>
-            </div>
-          <% end %>
-       </div>
+        <div id='loginbox'>
+            <h3>PLEASE LOGIN</h3>
+            <%= form_tag login_path do %>
+                <div class='field'>
+                    <%= label_tag :email %>
+                    <%= text_field_tag :email, params[:email],placeholder: "e.g. JohnDoe@gmail.com", oninvalid: "setCustomValidity('Valid email address is required')" %>
+                </div>
+                <div class='field'>
+                    <%= label_tag :password %>
+                    <%= password_field_tag :password %>
+                </div>
+                <div class='full_page actions'>
+                    <%= submit_tag "Login" %>
+                </div>
+            <% end %>
+         </div>
     </div>
   </div>
 </div>
@@ -29,7 +29,6 @@
       Now let's login and get started.
     </p>
     <% flash.each do |key, value| %>
-     <div class="flash <%= key %>"><p><%= "The Email Address or Password entered is invalid or does not match our records. Please try again." %></p></div>
+         <div class="flash <%= key %>"><p><%= "The Email Address or Password entered is invalid or does not match our records. Please try again." %></p></div>
     <% end %>
-
 </div>
