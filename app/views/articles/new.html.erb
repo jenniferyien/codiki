@@ -42,7 +42,7 @@
             </div>
             <div class='three_fourth field'>
               <strong><%= f.label :category_id %></strong><br>
-              <%= f.select :category_id, options_for_select(Category.all.collect { |p| [ p.title, p.id ] }), include_blank: true %>
+              <%= f.select :category_id, options_for_select(Category.all.collect { |p| [ p.title, p.id ] }) %>
             </div>
             <div class='half_page field'>
                 <strong><%= f.label :content %></strong><br>
