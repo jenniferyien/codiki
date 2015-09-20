@@ -6,6 +6,15 @@ class UserNotifier < ApplicationMailer
    def send_signup_email(user)
      @contributor = user
      mail( to: @contributor.email,
-     subject: 'Thanks for signing up for our amazing app' )
+     subject: 'Thanks for registering for Codiki' )
    end
+
+   def update_email(article)
+     @theArticle = article.contributor_id
+     @contributor = Contributor.find(id=@theArticle)
+     @article = article.title
+     mail( to: @contributor.email,
+     subject: "Article: #{@article} has been updated" )
+   end
+
 end

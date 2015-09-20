@@ -35,7 +35,7 @@
     </div>
 </div>
 <div class='one_fourth welcomeNote'>
-    <ul class='errorPage'>
+    <ul class='errorPage'id='errorNotice'>
       <% @contributor.errors.each do |field, error| %>
           <% if field.to_s.humanize == 'Email' %>
               <li><%= "#{field.to_s.humanize} must be valid and can't be blank" %></li>

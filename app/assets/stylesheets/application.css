@@ -109,6 +109,10 @@ a:hover {
   float: left;
 }
 
+.one_fifth {
+  width: 20%;
+  float: left;
+}
 /*1/4 page div*/
 .one_fourth{
   width: 33%;
@@ -122,7 +126,7 @@ a:hover {
 }
 
 /*header logo on left*/
-.half_page#logo h1{
+#logo h1{
   margin: 5% 0;
   font-size: 40px;
   font-family: 'VT323';
@@ -132,10 +136,6 @@ a:hover {
 .nav{
   float: right;
   margin: 3% 10px;
-}
-.one_fourth.linkNav {
-  float: right;
-  margin-right: 5%;
 }
 
  /*----- Menu Navigation -----*/
@@ -167,7 +167,7 @@ a:hover {
       /*makes sure position of box does not interfer with div*/
       position:absolute;
       /*position of box under arrow*/
-      left:-70px;
+      left:-75px;
       top: 27px;
       opacity:0;
       background:#2C3034;
@@ -195,23 +195,341 @@ a:hover {
 .headBanner.navigationHeader {
   min-height: 50px;
 }
+
+.rotate {
+  transform: rotate(5deg);
+}
+.rerotate {
+  transform: rotate(0deg);
+}
+.opprotate {
+  transform: rotate(-8deg);
+  transform: translateX(2em);
+}
+
+.goat {
+  float:right;
+}
+
  /*media*/
+ @media screen and (max-width: 1119px) {
+     textarea {
+       width: 450px;
+       height: 500px;
+     }
+
+ }
+ @media screen and (max-width: 1055px) {
+     textarea {
+       width: 425px;
+       height: 525px;
+     }
+     .full_page.formbox.articleBox {
+       min-height: 400px;
+       margin: 1% 0;
+       float:left;
+       margin-right: 5%;
+     }
+     .full_page.formbox.thelogin {
+       min-height: 250px;
+       float:left;
+       margin-top: 40%;
+       margin-right: 5%;
+       z-index: 0;
+     }
+     .full_page.formbox.registrationBox {
+       min-height: 400px;
+       margin: 1% 0;
+       float:left;
+       margin-top: 40%;
+       margin-right: 5%;
+       z-index: 0;
+     }
+     .full_page.formbox.newUpdate {
+       min-height: 350px;
+       margin: 1% 0;
+       float:left;
+       margin-top: 25%;
+       margin-right: 5%;
+       z-index: 0;
+     }
+ }
+ @media screen and (max-width: 1000px) {
+     textarea {
+       width: 400px;
+       height: 550px;
+     }
+     #contactUs {
+       margin: 2% 15% 5% 15%;
+     }
+
+ }
+ @media screen and (max-width: 900px) {
+     textarea {
+       width: 325px;
+       height: 600px;
+     }
+     .article hr {
+       width: 710px;
+     }
+     .full_page.artContent {
+       width: 525px;
+     }
+     #media {
+       width: 85%;
+     }
+     #catList {
+       width: 85%;
+     }
+     .categoryHead {
+       height: 30%;
+     }
+     .one_fourth.welcomeNote {
+       width: 100%;
+     }
+     .one_fourth.welcomeBackNote {
+       width: 100%;
+     }
+ }
+
+ @media screen and (max-width: 800px) {
+     .article hr {
+       width: 610px;
+     }
+     .nav.loginName {
+       margin-right: 0;
+       margin-left: 0;
+     }
+     #media {
+       width: 90%;
+     }
+     #catList {
+       width: 90%;
+     }
+     #contactUs {
+       margin: 2% 15% 5% 8%;
+     }
+     .full_page.formbox.newUpdate {
+       margin-top: 30%;
+     }
+
+     .full_page.formbox.thelogin {
+       margin-top: 50%;
+     }
+     .full_page.formbox.registrationBox {
+       margin-top: 60%;
+     }
+ }
+
+
+@media screen and (max-width: 750px) {
+  .navNav {
+    margin-top: 7%;
+  }
+  .full_page.artContent {
+    width: 425px;
+  }
+  textarea {
+    width: 300px;
+    height: 625px;
+  }
+  .full_page.formbox.articleBox {
+    min-height: 500px;
+  }
+}
 
  @media screen and (max-width: 700px) {
-   .half_page#logo {
+   #logo {
      width: 33;
    }
-   .half_page#logo h1{
+   #logo h1{
     margin-top: 8%
    }
    .half_page.linkNav {
      margin-right: 0;
    }
+   .article hr {
+     width: 510px;
+   }
+   .categoryHead {
+     height: 45%;
+   }
+   textarea {
+     width: 250px;
+     height: 650px;
+   }
+   form {
+     clear: both;
+   }
+   .hero {
+     height: 50%;
+   }
+   #media {
+     width: 100%;
+   }
+   #catList {
+     width: 100%;
+   }
+   #catShow {
+     width: 100%;
+   }
+   #aboutArticle {
+     width: 100%;
+   }
+   #update {
+     width: 100%;
+   }
+   #update p{
+     text-align: left;
+   }
+   #articleUpdate {
+     width: 100%;
+   }
+   .titleCard {
+     width: 100%;
+   }
+   .titleCard hr {
+     width: 100%;
+   }
+   #categoryNote hr {
+     width: 100%;
+   }
+   #articleNote p {
+     width: 100%;
+     text-align: left;
+     margin-left: 0;
+   }
+   .title {
+     line-height: 2em;
+     font-size: 16px;
+   }
+   .messages {
+     width: 100%;
+   }
+   input[type=text] {
+     width: 350px;
+   }
+   input[type=password] {
+     width: 350px;
+   }
+   input[type=email] {
+     width: 350px;
+   }
+}
+@media screen and (max-width: 600px) {
+  .article hr {
+    width: 410px;
+  }
+  .hero {
+    height: 55%;
+  }
+  .nameBanner {
+    height: 35%;
+  }
+  .full_page.artContent {
+    width: 325px;
+  }
+  textarea {
+    width: 200px;
+    height: 700px;
+  }
+  #contactUs {
+    margin: 2% 15% 5% 2%;
+  }
+  .full_page.formbox.newUpdate {
+    margin-top: 45%;
+  }
+  .full_page.formbox.thelogin {
+    margin-top: 70%;
+  }
+  .full_page.formbox.registrationBox {
+    margin-top: 75%;
+  }
+  input[type=text] {
+    width: 300px;
+  }
+  input[type=password] {
+    width: 300px;
+  }
+  input[type=email] {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .nav{
     margin: 3% 5px;
   }
-
+  .navNav {
+    margin-top: 8%;
+  }
+  .article hr {
+    width: 350px;
+  }
+  .hero {
+    height: 60%;
+  }
+  .categoryHead {
+    height: 50%;
+  }
+  .nameBanner {
+    height: 40%;
+  }
+  .submenu {
+    left:-5px;
+  }
+  .full_page.artContent {
+    width: 275px;
+  }
+  input[type=text] {
+    width: 190%;
+  }
+  .textField input[type=text]{
+    width: 150%;
+  }
+  select {
+    width: 140%;
+  }
+  .full_page.actions input[type=submit] {
+    width: 75%;
+  }
+  textarea {
+    width: 300px;
+    height: 700px;
+  }
+  .one_fourth.markdownGuide {
+    width: 75%;
+    margin-left: 0;
+  }
+  #contactUs h3 {
+    font-size: 30px;
+    margin: 6% 0;
+    margin-top: 22%;
+  }
+  .full_page.formbox.newUpdate {
+    margin-top: 90%;
+  }
+  .full_page.formbox.thelogin {
+    margin-top: 80%;
+  }
+  .full_page.formbox.registrationBox {
+    margin-top: 80%;
+  }
+  input[type=text] {
+    width: 250px;
+  }
+  input[type=password] {
+    width: 250px;
+  }
+  input[type=email] {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .full_page.formbox.thelogin {
+    margin-top: 80%;
+  }
+  .full_page.formbox.registrationBox {
+    margin-top: 110%;
+  }
 }

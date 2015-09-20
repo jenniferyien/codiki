@@ -4,8 +4,11 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Thanks for signing up, <%= @contributor.first_name %>!</h1>
-    <p>Thanks for joining and have a great day! Now sign in and do
-awesome things!</p>
+    <h1>You have just registered for Codiki!</h1>
+    <p>Thanks for signing up, <%= @contributor.first_name.capitalize %>!<br>
+      This is the first step to the many endless possiblities. Don't for get to
+      <a href='https://codiki.herokuapp.com/login'>Login</a> and contribute your many wonderful ideas.
+      Welcome to the Community and continue to be awesome!</p>
+    <p> Lots of Love from the <strong><em> Codiki community</em></strong> </p>
   </body>
 </html>

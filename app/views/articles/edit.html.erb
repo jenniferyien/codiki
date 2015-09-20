@@ -8,10 +8,10 @@
       </div>
     </div>
 </div>
-<div>
+<div class='headBanner'>
   <div id='articleNote'>
-    <div class='half_page'>
-        <h3><%= link_to "#{@article.category.title}", category_path("#{@article.category.id}") %>:Article:</h3>
+    <div class='half_page titleCard'>
+        <h3><%= link_to "#{@article.category.title}", category_path("#{@article.category.id}") %>: Article:</h3>
         <hr />
     </div>
   </div>

@@ -9,23 +9,23 @@
         </div>
     </div>
 </div>
-<div id= 'articlePage'>
+<div class= 'headBanner'>
     <div id='articleNote'>
-      <div class='half_page'>
+      <div class='half_page titleCard'>
           <h3><%= link_to "#{@article.category.title}", category_path("#{@article.category.id}") %>: Article:</h3>
           <hr />
       </div>
-      <div class='one_fourth'>
+      <div class='half_page'>
         <% if current_contributor %>
           <p><%= link_to 'Edit Article', edit_article_path(@article) %><p>
         <% end %>
       </div>
     </div>
     <div id='actualArticle'>
-      <div class='half_page'>
+      <div class='half_page' id='articleUpdate'>
         <h2><%= @article.title %></h2>
       </div>
-      <div class='one_fourth' id='update'>
+      <div class='half_page' id='update'>
         <p id='timestamp'><%= (@article.updated_at).strftime("%b-%d-%Y") %></p>
         <p>
           <strong>Updated:</strong>

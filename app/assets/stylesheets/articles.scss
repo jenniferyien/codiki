@@ -3,9 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#articlePage {
-  min-height: 500px;
-}
 // index
 .hero {
   background-color: #2C3034;
@@ -81,10 +78,10 @@
 
 #articleNote{
   margin: 0 3%;
-  margin-left: 10%;
+  // margin-left: 10%;
   height: 60px;
   max-width: 1090px;
-  clear: both;
+  // clear: both;
 }
 #articleNote h3  {
   color: #78BFD1;
@@ -96,7 +93,7 @@
   color: #2C3034;
 }
 .half_page hr {
-  width: 170%;
+  width: 200%;
 }
 #articleNote p{
   text-align: right;
@@ -113,30 +110,29 @@
 
 #actualArticle {
   margin:0 3%;
-  margin-left: 10%;
   max-width: 1090px;
-  height: 100%;
 }
 #actualArticle h2 {
   color: #333C81;
 }
 
-.one_fourth#update {
+.half_page#update {
   text-align: right;
-  margin-right: 10%;
+  // margin-right: 10%;
 }
-.one_fourth#update p{
+.half_page#update p{
   margin: 0;
   font-size: 11px;
 }
 .half_page#update #timestamp {
-  font-size: 9px;
+  font-size: 10px;
 }
 .three_fourth p {
   margin: 0;
 }
 .full_page.artContent {
   width: 700px;
+  margin-bottom: 160px;
 }
 
 // new
@@ -183,6 +179,6 @@ select {
   margin: 1% 0;
 }
 
-@media screen and (max-width: 900px) {
-
+.one_fourth.markdownGuide{
+  margin-left: 15%;
 }

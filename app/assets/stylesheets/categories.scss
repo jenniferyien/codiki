@@ -15,11 +15,6 @@
 
 .blurb {
   margin-top: 0;
-  margin-left: 5%;
-}
-.category {
-  margin: 0 3%;
-  margin-left: 15%;
 }
 .categoryHead {
   background-color: #2C3034;
@@ -33,7 +28,7 @@
 .category.topics {
   background-color: #E6E6E6;
   padding:  1% 2%;
-  margin: 1% 3% 1% 15%;
+  margin: 1% 3% 1% 0;
 }
 
 .category.topics h2 {
@@ -54,17 +49,11 @@
 
 // edit
 
-.half_page.category {
-  margin-left: 10%;
-}
 .half_page.category a {
   color: #78BFD1;
 }
 .half_page.category a:hover {
   color: #2C3034;
-}
-.category.form {
-  margin-left: 10%;
 }
 
 textarea {
@@ -80,6 +69,13 @@ label {
 .one_fourth h4 a:hover {
   color: #2C3034;
 }
+.three_fourth h4 a {
+  color: #78BFD1;
+}
+.three_fourth h4 a:hover {
+  color: #2C3034;
+}
+
 .full_page.actions input[type=submit]{
   background-color: #78BFD1;
   border-radius: 20px;

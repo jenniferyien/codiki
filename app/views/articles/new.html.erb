@@ -10,7 +10,7 @@
       </div>
   </div>
 </div>
-<div>
+<div class='headBanner'>
   <div id='articleNote'>
     <div class='half_page'>
         <h3><%= link_to 'Article:', articles_path %></h3>
@@ -37,7 +37,7 @@
         <div class='three_fourth field'>
           <strong><%= f.label :contributor_id %></strong>
           <% if current_contributor %>
-          <%= "#{current_contributor.first_name} #{current_contributor.last_name} "%>
+          <%= "#{current_contributor.first_name.capitalize} #{current_contributor.last_name.capitalize} "%>
           <% end %>
         </div>
         <div class='three_fourth field'>
@@ -51,8 +51,8 @@
             <%= f.submit %>
           </div>
         </div>
-        <div class='one_fourth'>
-          <h4>BASIC WRITING GUIDE</h4>
+        <div class='one_fourth markdownGuide'>
+          <h4><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>BASIC WRITING GUIDE FOR MARKDOWN</a></h4>
           <p> <strong> Heading </strong> <br/>
               # The largest heading <br />
               ## The second largest heading <br />
@@ -70,7 +70,6 @@
               indicate with a ( > ) before the words <br /><br/>
               <strong> Formatting </strong><br/>
               Multiple lines: use triple backticks (```)<br /><br/>
-              <a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet'>More info on Markdown</a>
           </p>
         </div>
     <% end %>
