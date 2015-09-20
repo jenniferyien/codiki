@@ -1,28 +1,25 @@
-== README
+# Codiki
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Codiki is a one-stop shop coding project community created by community of fellow coders. We are passionate about providing a space for everyone to contribute, experiment, and explore their ideas. Our work is simply to provide project ideas for others to practice and grow their own personal skills.
 
-Things you may want to cover:
+## Wireframes & Database
+**Wanna check some Wireframes:**
+> [Check it out here on my Trello Board](https://trello.com/c/jVQfI32v)
 
-* Ruby version
+**Project Codiki**, runs on a PostgreSQL database.
+> This [ERD](https://trello.com/c/kO6wuh1Q) shows the different tables needed within my database.
 
-* System dependencies
+## The Codiki Experience
 
-* Configuration
+Additional Add-ons that you will experience:
+* Sendgrid email when you Register
+* Sendgrid email sent to original article creator when article is updated
+* All Category Summaries or Article Contents will render Markdown language/filetype
+* A Codiki Goat will greet you on every page.
 
-* Database creation
+Downloading the code:
+* Make sure to run a db:create, db:migrate so the database is set up
 
-* Database initialization
+[Screenshot of Emails that will be sent.](https://trello.com/c/ETuezaQa)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+By Jennifer Yien
