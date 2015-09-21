@@ -12,8 +12,8 @@ Codiki is a one-stop shop coding project community created by community of fello
 ## The Codiki Experience
 
 Additional Add-ons that you will experience:
-* Sendgrid email when you Register
-* Sendgrid email sent to original article creator when article is updated
+* Sendgrid email when you Register [SendGrid was removed]
+* Sendgrid email sent to original article creator when article is updated [SendGrid was removed]
 * All Category Summaries or Article Contents will render Markdown language/filetype
 * A Codiki Goat will greet you on every page.
 
