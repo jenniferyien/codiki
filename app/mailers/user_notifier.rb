@@ -1,6 +1,6 @@
 class UserNotifier < ApplicationMailer
   #default email address
-  default from: 'jenniferllwu@gmail.com'
+  default from: 'noreply@codiki.com'
 
    # send a signup email to the user, pass in the user object that   contains the user's email address
    def send_signup_email(user)
